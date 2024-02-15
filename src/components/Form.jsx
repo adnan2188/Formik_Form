@@ -32,7 +32,7 @@ const Form = () => {
 
 
             // Send the form data using emailjs
-            emailjs(
+            emailjs.sendForm(
                 'Formik_Form',
                 'template_j47k40y',
                 form.current,
