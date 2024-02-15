@@ -115,12 +115,10 @@ p {
 
     .container {
         height: 85vh;
-        background-color: red;
     }
 
     form {
         width: 80%;
-        margin-top: -130px;
     }
 
     input {
