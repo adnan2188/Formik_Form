@@ -100,7 +100,7 @@ p {
 
 @media screen and (max-width: 500px) {
     .container {
-        height: 90vh;
+        height: 96vh;
     }
 
     form {
