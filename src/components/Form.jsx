@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import { signUpSchema } from './Yup_Schema.jsx';
-
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import './My_style.css'
 // Define the initial values for the form fields
 const initialValues = {
@@ -11,6 +12,19 @@ const initialValues = {
 }
 // Create a functional component named Form
 const Form = () => {
+    const form = useRef();
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+
+    // emailjs
+    //     .sendForm(
+    //         'Formik_Form',
+    //         'template_j47k40y',
+    //         form.current,
+    //         "R2_F3IM8v4OvIXF_S"
+    //     )
+    //     e.target.reset();
+    // };
 
     // Destructure values, errors, touched, handleBlur, handleChange, and handleSubmit from the useFormik hook
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
@@ -30,6 +44,14 @@ const Form = () => {
             // Reset the form using the resetForm method provided by the useFormik hook
             action.resetForm()
 
+            // Send the form data using emailjs
+            emailjs.sendForm(
+                'Formik_Form',
+                'template_j47k40y',
+                form.current,
+                "R2_F3IM8v4OvIXF_S"
+            )
+            action.resetForm()
         }
     });
 
@@ -37,7 +59,7 @@ const Form = () => {
     return (
         <>
             <div className='container'>
-                <form onSubmit={handleSubmit}>
+                <form ref={form} onSubmit={handleSubmit} >
                     <h1>Login</h1>
                     <div className="contact_form-div">
                         <label htmlFor="">Name</label>
@@ -102,6 +124,4 @@ const Form = () => {
     )
 }
 
-export default Form
-
-
+export default Form;
