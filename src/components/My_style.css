@@ -78,7 +78,6 @@ p {
 
 @media screen and (max-width: 500px) {
     form {
-        background-color: red;
         width: 80%
     }
 }
