@@ -101,8 +101,7 @@ p {
 @media screen and (max-width: 500px) {
 
     .container {
-        background-color: red;
-        height: 94vh;
+        height: 90vh;
     }
 
     form {
