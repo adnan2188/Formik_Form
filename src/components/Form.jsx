@@ -13,18 +13,6 @@ const initialValues = {
 // Create a functional component named Form
 const Form = () => {
     const form = useRef();
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-
-    // emailjs
-    //     .sendForm(
-    //         'Formik_Form',
-    //         'template_j47k40y',
-    //         form.current,
-    //         "R2_F3IM8v4OvIXF_S"
-    //     )
-    //     e.target.reset();
-    // };
 
     // Destructure values, errors, touched, handleBlur, handleChange, and handleSubmit from the useFormik hook
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
@@ -41,16 +29,16 @@ const Form = () => {
             // Log the form values to the console
             console.log(values);
 
-            // Reset the form using the resetForm method provided by the useFormik hook
-            action.resetForm()
+
 
             // Send the form data using emailjs
-            emailjs.sendForm(
+            emailjs(
                 'Formik_Form',
                 'template_j47k40y',
                 form.current,
                 "R2_F3IM8v4OvIXF_S"
             )
+            // Reset the form using the resetForm method provided by the useFormik hook
             action.resetForm()
         }
     });
@@ -59,7 +47,7 @@ const Form = () => {
     return (
         <>
             <div className='container'>
-                <form ref={form} onSubmit={handleSubmit} >
+                <form onSubmit={handleSubmit} >
                     <h1>Login</h1>
                     <div className="contact_form-div">
                         <label htmlFor="">Name</label>
