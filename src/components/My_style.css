@@ -115,6 +115,7 @@ p {
 
     .container {
         height: 90vh;
+        background-color: red;
     }
 
     form {
