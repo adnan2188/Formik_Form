@@ -31,15 +31,19 @@ const Form = () => {
 
 
 
-            // Send the form data using emailjs
-            emailjs.sendForm(
-                'Formik_Form',
-                'template_j47k40y',
-                form.current,
-                "R2_F3IM8v4OvIXF_S"
-            )
-            // Reset the form using the resetForm method provided by the useFormik hook
-            action.resetForm()
+            try {
+                // Send the form data using emailjs
+                emailjs.sendForm(
+                    'Formik_Form',
+                    'template_j47k40y',
+                    form.current,
+                    "R2_F3IM8v4OvIXF_S"
+                )
+                // Reset the form using the resetForm method provided by the useFormik hook
+                action.resetForm()
+            } catch (error) {
+                console.error("Error sending email:", error);
+            }
         }
     });
 
@@ -47,7 +51,7 @@ const Form = () => {
     return (
         <>
             <div className='container'>
-                <form onSubmit={handleSubmit} >
+                <form ref={form} onSubmit={handleSubmit} >
                     <h1>Login</h1>
                     <div className="contact_form-div">
                         <label htmlFor="">Name</label>
@@ -105,7 +109,7 @@ const Form = () => {
                         />
                     </div>
                     {errors.confirm_password && touched.confirm_password ? (<p>{errors.confirm_password}</p>) : null}
-                    <button onClick={handleSubmit}>Login</button>
+                    <button type='submit'>Login</button>
                 </form>
             </div>
         </>
