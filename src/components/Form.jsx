@@ -62,6 +62,7 @@ const Form = () => {
                             value={values.email}
                             onChange={handleChange}
                             onBlur={handleBlur}
+                            placeholder='example@gmail.com'
                         />
                     </div>
                     {errors.email && touched.email ? (<p>{errors.email}</p>) : null}
