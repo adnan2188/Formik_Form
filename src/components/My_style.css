@@ -71,20 +71,14 @@ input {
 }
 
 .contact_form-div:focus-within label {
-    padding-bottom: 10px;
     top: -1rem;
-    animation: fadeIn_label 0.5s ease-in-out;
+    animation: fadeIn_label 0.3s ease-in-out;
 }
 
 @keyframes fadeIn_label {
     from {
         opacity: 10;
         transform: translateY(20px);
-    }
-
-    to {
-        opacity: 10;
-        transform: translateY(0);
     }
 }
 

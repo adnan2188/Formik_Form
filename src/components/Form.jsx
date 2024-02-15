@@ -49,6 +49,7 @@ const Form = () => {
                             value={values.name}
                             onChange={handleChange}
                             onBlur={handleBlur}
+                            placeholder='enter you name'
                         />
                     </div>
                     {errors.name && touched.name ? (<p>{errors.name}</p>) : null}
@@ -76,6 +77,7 @@ const Form = () => {
                             value={values.password}
                             onChange={handleChange}
                             onBlur={handleBlur}
+                            placeholder='enter your password'
                         />
                     </div>
                     {errors.password && touched.password ? (<p>{errors.password}</p>) : null}
@@ -89,6 +91,7 @@ const Form = () => {
                             value={values.confirm_password}
                             onChange={handleChange}
                             onBlur={handleBlur}
+                            placeholder='confirm your password'
                         />
                     </div>
                     {errors.confirm_password && touched.confirm_password ? (<p>{errors.confirm_password}</p>) : null}
