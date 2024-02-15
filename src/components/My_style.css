@@ -12,6 +12,11 @@ body {
     height: 100vh;
 }
 
+h1 {
+    text-align: center;
+    color: blue;
+}
+
 form {
     background-color: #fff;
     border-radius: 8px;
@@ -19,9 +24,9 @@ form {
     padding: 20px;
     animation: fadeIn 0.5s ease-in-out;
     display: grid;
-    gap: 20px;
-    width: 300px
-        /* Make sure the form takes the full width */
+    gap: 30px;
+    width: 300px;
+    /* Make sure the form takes the full width */
 }
 
 @keyframes fadeIn {
@@ -36,18 +41,32 @@ form {
     }
 }
 
+.contact_form-div {
+    position: relative;
+}
+
 label {
     display: block;
     margin-bottom: 8px;
+    position: absolute;
+    top: -0.60rem;
+    left: 0.75rem;
+    z-index: 10;
+    background-color: white;
+    font-weight: 500;
 }
 
 input {
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
     padding: 12px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.3s ease-in-out;
+    z-index: 1;
 }
 
 input:focus {
@@ -55,7 +74,7 @@ input:focus {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: rgba(59, 59, 254, 0.903);
     color: #fff;
     padding: 12px 15px;
     border: none;
@@ -63,10 +82,13 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease-in-out;
+    width: 90px;
+    font-weight: 550;
+    letter-spacing: 2;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: blue;
 }
 
 p {
@@ -78,6 +100,9 @@ p {
 
 @media screen and (max-width: 500px) {
     form {
-        width: 80%
+        width: 80%;
+        margin-top: -500px;
     }
+
+
 }

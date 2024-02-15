@@ -35,63 +35,66 @@ const Form = () => {
 
     // Return the JSX representing the form
     return (
-        <div className='container'>
-            <form onSubmit={handleSubmit}>
-                <div className="contact_form-div">
-                    <label htmlFor="">Name</label>
-                    <input
-                        type="name"
-                        autoComplete="off"
-                        name="name"
-                        id="name"
-                        value={values.name}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                    />
-                </div>
-                {errors.name && touched.name ? (<p>{errors.name}</p>) : null}
-                <div className="contact_form-div">
-                    <label htmlFor="">Email</label>
-                    <input
-                        type="email"
-                        autoComplete="off"
-                        id="email"
-                        name="email"
-                        value={values.email}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                    />
-                </div>
-                {errors.email && touched.email ? (<p>{errors.email}</p>) : null}
-                <div className="contact_form-div">
-                    <label htmlFor="">Password </label>
-                    <input
-                        type="password"
-                        autoComplete="off"
-                        id="password"
-                        name="password"
-                        value={values.password}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                    />
-                </div>
-                {errors.password && touched.password ? (<p>{errors.password}</p>) : null}
-                <div className="contact_form-div">
-                    <label htmlFor="">Confirm Password </label>
-                    <input
-                        type="password"
-                        autoComplete="off"
-                        name="confirm_password"
-                        id='conirm_password'
-                        value={values.confirm_password}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                    />
-                </div>
-                {errors.confirm_password && touched.confirm_password ? (<p>{errors.confirm_password}</p>) : null}
-                <button onClick={handleSubmit}>Submit</button>
-            </form>
-        </div>
+        <>
+            <div className='container'>
+                <form onSubmit={handleSubmit}>
+                    <h1>Login</h1>
+                    <div className="contact_form-div">
+                        <label htmlFor="">Name</label>
+                        <input
+                            type="name"
+                            autoComplete="off"
+                            name="name"
+                            id="name"
+                            value={values.name}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                        />
+                    </div>
+                    {errors.name && touched.name ? (<p>{errors.name}</p>) : null}
+                    <div className="contact_form-div">
+                        <label htmlFor="">Email</label>
+                        <input
+                            type="email"
+                            autoComplete="off"
+                            id="email"
+                            name="email"
+                            value={values.email}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                        />
+                    </div>
+                    {errors.email && touched.email ? (<p>{errors.email}</p>) : null}
+                    <div className="contact_form-div">
+                        <label htmlFor="">Password </label>
+                        <input
+                            type="password"
+                            autoComplete="off"
+                            id="password"
+                            name="password"
+                            value={values.password}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                        />
+                    </div>
+                    {errors.password && touched.password ? (<p>{errors.password}</p>) : null}
+                    <div className="contact_form-div">
+                        <label htmlFor="">Confirm Password </label>
+                        <input
+                            type="password"
+                            autoComplete="off"
+                            name="confirm_password"
+                            id='conirm_password'
+                            value={values.confirm_password}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                        />
+                    </div>
+                    {errors.confirm_password && touched.confirm_password ? (<p>{errors.confirm_password}</p>) : null}
+                    <button onClick={handleSubmit}>Submit</button>
+                </form>
+            </div>
+        </>
     )
 }
 
