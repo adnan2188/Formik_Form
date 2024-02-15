@@ -117,7 +117,7 @@ const Form = () => {
                         />
                     </div>
                     {errors.confirm_password && touched.confirm_password ? (<p>{errors.confirm_password}</p>) : null}
-                    <button onClick={handleSubmit}>Submit</button>
+                    <button onClick={handleSubmit}>Login</button>
                 </form>
             </div>
         </>
