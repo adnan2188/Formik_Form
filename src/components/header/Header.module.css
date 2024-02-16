@@ -1,0 +1,79 @@
+.container {
+
+    .link {
+        text-decoration: none;
+        color: black;
+        position: relative;
+
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+        background-color: rgb(224, 224, 224);
+    }
+
+    .nav_menu {
+
+        ul {
+            display: flex;
+            align-items: center;
+
+
+            li {
+                list-style: none;
+                cursor: pointer;
+                padding: 0px 20px;
+                font-size: 1.25rem;
+                /* transition: 1s; */
+            }
+
+            .link::before {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background-color: black;
+                transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+            }
+
+            .link:hover::before,
+            .link.active::before {
+                width: 100%;
+                left: 0;
+            }
+
+
+        }
+    }
+
+    .lgoin_div {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .nav_toggle {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        /* Existing styles here */
+
+        .nav_menu {
+            /* Existing styles here */
+
+            &.show_menu {
+                display: flex;
+            }
+
+            /* Rest of the styles */
+        }
+    }
+
+}
