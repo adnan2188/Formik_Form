@@ -29,7 +29,7 @@ form {
     animation: fadeIn 0.5s ease-in-out;
     display: grid;
     gap: 30px;
-    width: 300px;
+    width: 450px;
     /* Make sure the form takes the full width */
 }
 
